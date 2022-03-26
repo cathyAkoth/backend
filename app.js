@@ -4,8 +4,7 @@ require('dotenv').config()
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
-// route imports
-const todoRoutes = require('./routes/todoRoutes');
+// route import
 const userRoutes = require('./routes/userRoutes');
 
 const { PORT } = process.env 
@@ -23,7 +22,7 @@ app.use(bodyParser.urlencoded({extended: true }))
 
 
 // load routes to app
-app.use('/todos', todoRoutes)
+
 app.use('/auth', userRoutes)
 
 // spin up the server 
